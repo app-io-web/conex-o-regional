@@ -58,6 +58,8 @@ export default {
           floresta: "hsl(var(--floresta-negra))",
           glow: "hsl(var(--glow-green))",
         },
+        "section-dark": "hsl(var(--section-dark))",
+        "section-dark-foreground": "hsl(var(--section-dark-foreground))",
       },
       borderRadius: {
         lg: "var(--radius)",

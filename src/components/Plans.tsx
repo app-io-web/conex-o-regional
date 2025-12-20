@@ -71,8 +71,8 @@ export function Plans() {
               key={plan.name}
               className={`relative rounded-2xl p-8 transition-all duration-300 hover:scale-105 ${
                 plan.popular
-                  ? "bg-gradient-to-b from-primary/20 to-card border-2 border-primary glow-effect"
-                  : "card-gradient border border-border hover:border-primary/50"
+                  ? "bg-gradient-to-b from-primary/10 to-card border-2 border-primary shadow-lg"
+                  : "bg-card border border-border hover:border-primary/50 shadow-md"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -125,7 +125,7 @@ export function Plans() {
         </div>
 
         {/* Enterprise CTA */}
-        <div id="empresas" className="mt-16 text-center p-8 rounded-2xl card-gradient border border-border max-w-3xl mx-auto">
+        <div id="empresas" className="mt-16 text-center p-8 rounded-2xl bg-card border border-border shadow-md max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Zap className="w-6 h-6 text-primary" />
             <h3 className="font-heading text-xl font-bold text-foreground">Planos Empresariais</h3>

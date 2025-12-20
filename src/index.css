@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 120 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 150 10% 15%;
 
-    --card: 120 8% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 15%;
 
-    --popover: 120 8% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
 
     --primary: 152 86% 36%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 135 50% 25%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 150 5% 96%;
+    --secondary-foreground: 150 10% 15%;
 
-    --muted: 120 5% 15%;
-    --muted-foreground: 120 5% 60%;
+    --muted: 150 5% 96%;
+    --muted-foreground: 150 5% 45%;
 
     --accent: 152 100% 42%;
     --accent-foreground: 0 0% 100%;
@@ -30,8 +30,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 120 8% 18%;
-    --input: 120 8% 18%;
+    --border: 150 10% 90%;
+    --input: 150 10% 90%;
     --ring: 152 86% 36%;
 
     --radius: 0.75rem;
@@ -40,18 +40,22 @@
     --verde-selva: 152 86% 36%;
     --selva-media: 140 60% 34%;
     --verde-esmeralda: 140 78% 20%;
-    --floresta-negra: 130 85% 12%;
+    --floresta-negra: 150 20% 10%;
     --glow-green: 152 100% 50%;
 
+    /* Section backgrounds */
+    --section-dark: 150 20% 10%;
+    --section-dark-foreground: 0 0% 98%;
+
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(152 86% 36% / 0.2), hsl(140 60% 34% / 0.1));
-    --gradient-card: linear-gradient(180deg, hsl(120 8% 10%), hsl(120 8% 6%));
+    --gradient-hero: linear-gradient(135deg, hsl(152 86% 36% / 0.1), hsl(140 60% 34% / 0.05));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(150 5% 98%));
     --gradient-accent: linear-gradient(135deg, hsl(152 86% 36%), hsl(140 60% 34%));
-    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(152 100% 50% / 0.15), transparent 50%);
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(152 100% 50% / 0.08), transparent 50%);
 
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(152 86% 36% / 0.3);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(152 86% 36% / 0.2);
+    --shadow-card: 0 8px 32px hsl(150 10% 50% / 0.1);
 
     /* Fonts */
     --font-heading: 'Space Grotesk', sans-serif;
@@ -59,7 +63,7 @@
   }
 
   .dark {
-    --background: 120 10% 4%;
+    --background: 150 20% 10%;
     --foreground: 0 0% 98%;
   }
 }

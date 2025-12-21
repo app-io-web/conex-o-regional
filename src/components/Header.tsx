@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Wifi } from "lucide-react";
+import { Menu, X, Wifi, User } from "lucide-react";
 
 const navItems = [
   { label: "Início", href: "/#inicio" },
@@ -9,6 +9,7 @@ const navItems = [
   { label: "Empresas", href: "/#empresas" },
   { label: "Trabalhe Conosco", href: "/#trabalhe" },
   { label: "Contato", href: "/#contato" },
+  { label: "Cadastre-se", href: "/cadastro", isLink: true },
 ];
 
 export function Header() {
@@ -31,23 +32,34 @@ export function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted"
-              >
-                {item.label}
-              </a>
+              item.isLink ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors rounded-lg hover:bg-muted"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/cadastro">
+            <a href="https://central.exemplo.com" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg">
-                Assine Já
+                <User className="w-4 h-4 mr-2" />
+                Central do Assinante
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,20 +76,32 @@ export function Header() {
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-up">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                item.isLink ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="px-4 py-3 text-sm font-medium text-primary hover:text-primary/80 hover:bg-muted rounded-lg transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
-              <Link to="/cadastro" onClick={() => setIsMenuOpen(false)}>
+              <a href="https://central.exemplo.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="hero" size="lg" className="mt-2 w-full">
-                  Assine Já
+                  <User className="w-4 h-4 mr-2" />
+                  Central do Assinante
                 </Button>
-              </Link>
+              </a>
             </nav>
           </div>
         )}

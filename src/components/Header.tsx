@@ -7,7 +7,7 @@ const navItems = [
   { label: "Início", href: "/#inicio" },
   { label: "Planos", href: "/#planos" },
   { label: "Empresas", href: "/#empresas" },
-  { label: "Trabalhe Conosco", href: "/#trabalhe" },
+  { label: "Trabalhe Conosco", href: "/trabalhe-conosco", isLink: true },
   { label: "Contato", href: "/#contato" },
   { label: "Cadastre-se", href: "/cadastro", isLink: true },
 ];

@@ -48,23 +48,7 @@ const plans = [
 
 export function Plans() {
   return (
-    <section id="planos" className="py-24 relative overflow-hidden">
-      {/* Speed Lines Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-speed-line"
-            style={{
-              top: `${20 + i * 15}%`,
-              left: "-100%",
-              width: "200%",
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: "6s",
-            }}
-          />
-        ))}
-      </div>
+    <section id="planos" className="py-24 relative">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">

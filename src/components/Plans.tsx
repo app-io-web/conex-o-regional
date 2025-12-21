@@ -14,6 +14,12 @@ const plans = [
       "Suporte técnico",
       "Instalação grátis",
     ],
+    services: [
+      { name: "Estudart", color: "bg-emerald-500" },
+      { name: "Ubook Plus", color: "bg-slate-400" },
+      { name: "Playkids", color: "bg-green-400" },
+    ],
+    servicesNote: "Obs.: Cliente tem acesso exclusivo a apenas 1 dos serviços",
   },
   {
     name: "Avançado",
@@ -28,6 +34,16 @@ const plans = [
       "Instalação grátis",
       "IP fixo opcional",
     ],
+    services: [
+      { name: "Max", color: "bg-blue-900" },
+      { name: "Sky", color: "bg-red-500" },
+      { name: "Estudart", color: "bg-emerald-500" },
+      { name: "Kaspersky", color: "bg-green-500" },
+      { name: "O Jornalista", color: "bg-gray-800" },
+      { name: "Docway", color: "bg-teal-400" },
+      { name: "Queima", color: "bg-orange-500" },
+    ],
+    servicesNote: null,
   },
   {
     name: "Ultra",
@@ -43,6 +59,16 @@ const plans = [
       "IP fixo incluso",
       "Garantia de velocidade",
     ],
+    services: [
+      { name: "Noping", color: "bg-cyan-400" },
+      { name: "Estudart", color: "bg-emerald-500" },
+      { name: "Kaspersky", color: "bg-green-500" },
+      { name: "Deezer", color: "bg-purple-600" },
+      { name: "O Jornalista", color: "bg-gray-800" },
+      { name: "Queima", color: "bg-orange-500" },
+      { name: "Playkids", color: "bg-green-400" },
+    ],
+    servicesNote: null,
   },
 ];
 
@@ -101,7 +127,7 @@ export function Plans() {
               </div>
 
               {/* Features */}
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-6">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -111,6 +137,24 @@ export function Plans() {
                   </li>
                 ))}
               </ul>
+
+              {/* Included Services */}
+              <div className="mb-6">
+                <p className="text-sm font-semibold text-foreground mb-3 text-center">Serviços Inclusos</p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {plan.services.map((service) => (
+                    <div
+                      key={service.name}
+                      className={`${service.color} text-white text-xs font-medium px-3 py-1.5 rounded-lg`}
+                    >
+                      {service.name}
+                    </div>
+                  ))}
+                </div>
+                {plan.servicesNote && (
+                  <p className="text-xs text-muted-foreground mt-2 text-center">{plan.servicesNote}</p>
+                )}
+              </div>
 
               {/* CTA */}
               <Button

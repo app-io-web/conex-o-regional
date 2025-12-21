@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Wifi, User } from "lucide-react";
 
 const navItems = [
-  { label: "Início", href: "/#inicio" },
+  { label: "Início", href: "/" },
   { label: "Planos", href: "/#planos" },
-  { label: "Empresas", href: "/#empresas" },
+  { label: "Empresas", href: "/empresas", isLink: true },
   { label: "Trabalhe Conosco", href: "/trabalhe-conosco", isLink: true },
   { label: "Contato", href: "/#contato" },
   { label: "Cadastre-se", href: "/cadastro", isLink: true },

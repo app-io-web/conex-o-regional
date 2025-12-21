@@ -39,6 +39,25 @@ export function Benefits() {
       {/* Background Effect */}
       <div className="absolute inset-0 hero-glow opacity-50" />
       
+      {/* Floating Data Dots */}
+      <div className="absolute inset-0 pointer-events-none">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-primary/30 animate-float-particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${6 + Math.random() * 4}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Glowing Orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+      
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -58,8 +77,9 @@ export function Benefits() {
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 shadow-md"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors relative">
                 <benefit.icon className="w-7 h-7 text-primary" />
+                <div className="absolute inset-0 rounded-xl border border-primary/20 group-hover:animate-signal-wave" />
               </div>
               <h3 className="font-heading text-lg font-bold text-foreground mb-2">
                 {benefit.title}

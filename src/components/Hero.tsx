@@ -121,27 +121,30 @@ export function Hero() {
 
           {/* Trust Badges - Always visible */}
           <div className="flex flex-wrap gap-8 mt-16 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="flex items-center gap-3 text-muted-foreground group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center relative animate-glow-pulse">
                 <Zap className="w-6 h-6 text-primary" />
+                <div className="absolute inset-0 rounded-full border border-primary/30 animate-signal-wave" />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">Até 1 Gbps</p>
                 <p className="text-sm">de velocidade</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="flex items-center gap-3 text-muted-foreground group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center relative animate-glow-pulse" style={{ animationDelay: '1s' }}>
                 <Shield className="w-6 h-6 text-primary" />
+                <div className="absolute inset-0 rounded-full border border-primary/30 animate-signal-wave" style={{ animationDelay: '1s' }} />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">99.9%</p>
                 <p className="text-sm">de estabilidade</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="flex items-center gap-3 text-muted-foreground group">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center relative animate-glow-pulse" style={{ animationDelay: '2s' }}>
                 <Headphones className="w-6 h-6 text-primary" />
+                <div className="absolute inset-0 rounded-full border border-primary/30 animate-signal-wave" style={{ animationDelay: '2s' }} />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">Suporte 24h</p>

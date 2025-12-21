@@ -65,7 +65,7 @@ export function HeroEmpresas() {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover md:aspect-auto aspect-square"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />

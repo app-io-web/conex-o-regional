@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Wifi } from "lucide-react";
 
 const navItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Planos", href: "#planos" },
-  { label: "Empresas", href: "#empresas" },
-  { label: "Trabalhe Conosco", href: "#trabalhe" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/#inicio" },
+  { label: "Planos", href: "/#planos" },
+  { label: "Empresas", href: "/#empresas" },
+  { label: "Trabalhe Conosco", href: "/#trabalhe" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export function Header() {
@@ -42,9 +43,11 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="hero" size="lg">
-              Assine Já
-            </Button>
+            <Link to="/cadastro">
+              <Button variant="hero" size="lg">
+                Assine Já
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,9 +73,11 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2">
-                Assine Já
-              </Button>
+              <Link to="/cadastro" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="hero" size="lg" className="mt-2 w-full">
+                  Assine Já
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

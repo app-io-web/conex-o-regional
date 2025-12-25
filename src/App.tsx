@@ -8,6 +8,7 @@ import Cadastro from "./pages/Cadastro";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import Empresas from "./pages/Empresas";
 import Contato from "./pages/Contato";
+import DownloadApp from "./pages/DownloadApp";
 import SiteManager from "./pages/SiteManager";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/empresas" element={<Empresas />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/baixar-app" element={<DownloadApp />} />
           <Route path="/site-manager" element={<SiteManager />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

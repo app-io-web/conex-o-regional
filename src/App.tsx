@@ -12,6 +12,7 @@ import DownloadApp from "./pages/DownloadApp";
 import SiteManager from "./pages/SiteManager";
 import CompartilharLocalizacao from "./pages/CompartilharLocalizacao";
 import VerLocalizacao from "./pages/VerLocalizacao";
+import TesteVelocidade from "./pages/TesteVelocidade";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/site-manager" element={<SiteManager />} />
           <Route path="/compartilhar-localizacao" element={<CompartilharLocalizacao />} />
           <Route path="/ver-localizacao/:shareId" element={<VerLocalizacao />} />
+          <Route path="/teste-velocidade" element={<TesteVelocidade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

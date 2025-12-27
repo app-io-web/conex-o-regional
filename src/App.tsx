@@ -10,6 +10,8 @@ import Empresas from "./pages/Empresas";
 import Contato from "./pages/Contato";
 import DownloadApp from "./pages/DownloadApp";
 import SiteManager from "./pages/SiteManager";
+import CompartilharLocalizacao from "./pages/CompartilharLocalizacao";
+import VerLocalizacao from "./pages/VerLocalizacao";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/contato" element={<Contato />} />
           <Route path="/baixar-app" element={<DownloadApp />} />
           <Route path="/site-manager" element={<SiteManager />} />
+          <Route path="/compartilhar-localizacao" element={<CompartilharLocalizacao />} />
+          <Route path="/ver-localizacao/:shareId" element={<VerLocalizacao />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
